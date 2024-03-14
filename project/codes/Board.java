@@ -1,27 +1,30 @@
 package board;
 
 public class Board {
-    public int size;
-    public char matrix[][];
+    int size;
+    char matrix[][];
 
-    public Board(int size,char symbol) {
+    public Board(int size, char deafulSymbol) {
         this.size = size;
         matrix = new char [size][size];
 
         for(int i=0;i<size;i++) {
-            for(int j=0;j<size;j++) {
+            for(int j=0;j<size; j++) {
+                matrix[i][j] = deafulSymbol;
+            }
+        }
+
+        
+    }
+
+    public void setDefaultSymbol(char symbol) { // Another way to intialise with default Symbol
+        for(int i=0;i<size;i++) {
+            for(int j=0;j<size; j++) {
                 matrix[i][j] = symbol;
             }
         }
     }
-
-    /*public void setDefaultSymbol(char symbol){
-        for(int i=0;i<size;i++) {
-            for(int j=0;j<size;j++) {
-                matrix[i][j] = symbol;
-            }
-        }
-    }*/
+    
 
     public void printBoardConfig() {
         int sz = this.size;
@@ -34,5 +37,4 @@ public class Board {
         }
     }
 
-    
 }
