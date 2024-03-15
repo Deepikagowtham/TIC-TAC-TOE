@@ -1,8 +1,8 @@
 package board;
 
 public class Board {
-    int size;
-    char matrix[][];
+    public int size;
+    public char matrix[][];
 
     public Board(int size, char deafulSymbol) {
         this.size = size;
@@ -31,7 +31,7 @@ public class Board {
 
         for(int i=0;i<sz;i++) {
             for(int j=0;j<sz;j++) {
-                System.out.print(matrix[i][j] + " ");
+                System.out.print(matrix[i][j]+" ");
             }
             System.out.println();
         }
