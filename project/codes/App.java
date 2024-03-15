@@ -7,6 +7,13 @@ public class App {
       System.out.println("First Project -> Tic Tac Toe");
 
       Board b = new Board(3, '-');
+       b.printBoardConfig();
+
+    //   Scanner scn = new Scanner(System.in);
+    //   System.out.print("Please enter the name of Player: ");
+    //   String name = scn.nextLine();
+    //   System.out.print("Please  enter the symbol of Player: ");
+    //   char symbol = scn.nextLine().charAt(0);
 
       Player p1 = new Player();
       p1.setPlayerNameAndSymbol("Deepi", 'X');
